@@ -63,7 +63,7 @@
 
             $.each(opts.columns, function (c_index, c_item) {
 
-                var $td = $("<td>").text(item[c_item.data]).attr("data-i", c_index);
+                var $td = $("<td>").html(item[c_item.data]).attr("data-i", c_index);
 
                 if (c_item.starthidden) {
                     $td.hide();
@@ -160,7 +160,6 @@
                     case "datetime":
                         value = new Date(item.text());
                         break;
-
                     default:
                         value = item.text();
                         break;
